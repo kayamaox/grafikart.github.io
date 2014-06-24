@@ -10,10 +10,10 @@ layout: default
 
 
         <div class="posts">
-            {% for post in site.posts limit:4 %}
+            {% for post in paginator.posts %}
             <div class="post">
                 <a href="{{ post.url }}" class="post-thumb">
-                    <img src="/img/{{ post.img }}" alt="{{ post.title }}" width="555" height="300">
+                    <img src="http://lorempicsum.com/futurama/555/300/1" alt="Image article 1">
                 </a>
                 <div class="post-icon">
                     <i class="icon icon-pictures"></i>
@@ -29,6 +29,8 @@ layout: default
             </div>
             {% endfor %}
           </div>
+
+          {% include paginate.html %}
 
     </div>
 </section>
